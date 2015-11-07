@@ -15,7 +15,7 @@ static NSArray *_musics;
 static ZYMusics *_playingMusic;
 
 @implementation ZYMusicTools
-
+/// 当第一次调用该类的时候调用
 + (void)initialize{
     _musics = [ZYMusics objectArrayWithFilename:@"Musics.plist"];
 }

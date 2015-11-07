@@ -10,7 +10,7 @@
 #import "UIView+AdjustFrame.h"
 #import "ZYMusics.h"
 #import "ZYMusicTools.h"
-
+#import "ZYAudioPlay.h"
 
 
 @interface ZYPlayingMusicViewController ()
@@ -49,6 +49,9 @@
         self.sigerIcon.image = [UIImage imageNamed:playingMusic.icon];
         self.sigerName.text = playingMusic.singer;
         self.musicName.text = playingMusic.name;
+        
+        //播放音乐
+        [ZYAudioPlay startPlayMusic:self.playingMusic.filename];
     }
 }
 
@@ -60,14 +63,14 @@
     self.musicName.text = nil;
     self.sigerName.text = nil;
     self.sigerIcon.image = [UIImage imageNamed:@"play_cover_pic_bg"];
+    [ZYAudioPlay stopPlayMusic:self.playingMusic.filename];
+    
 }
 
 
 #pragma mark - 对控制器的操作
 
-/**
- *  显示控制器
- */
+/// 显示控制器
 - (void)show {
     
     // 0.判断播放音乐是否发生改变
@@ -98,14 +101,7 @@
 }
 
 
-
-
-
-
-
-/**
- *  退出控制器
- */
+/// 退出控制器
 - (IBAction)exit {
     
     // 1.拿到window
