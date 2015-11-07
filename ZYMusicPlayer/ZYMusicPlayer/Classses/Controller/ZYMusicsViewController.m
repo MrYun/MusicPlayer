@@ -11,10 +11,9 @@
 #import "ZYMusics.h"
 #import "UIImage+Circle.h"
 #import "ZYPlayingMusicViewController.h"
+#import "ZYMusicTools.h"
 
 @interface ZYMusicsViewController ()
-
-@property (nonatomic, strong) NSArray *musics;
 
 //定义播放器属性
 @property (nonatomic, strong) ZYPlayingMusicViewController *playingVC;
@@ -37,7 +36,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.musics.count;
+    return [ZYMusicTools musics].count;
     
 }
 
@@ -53,7 +52,7 @@
     
     //给cell设置数据
     //首先取出模型的数据
-    ZYMusics *musics = self.musics[indexPath.row];
+    ZYMusics *musics = [ZYMusicTools musics][indexPath.row];
     
     cell.imageView.image = [UIImage circleImageWithName:musics.singerIcon borderWidth:3.0 borderColor:[UIColor blackColor]];
     cell.textLabel.text = musics.name;
@@ -67,24 +66,21 @@
     // 1.让cell变为不选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    //拿到播放的音乐
+    ZYMusics *musics= [ZYMusicTools musics][indexPath.row];
+    
+    [ZYMusicTools setPlayingMusic:musics];
+    
     // 2.弹出控制器
     [self.playingVC show];
 }
 
 #pragma mark - 懒加载
-- (NSArray *)musics{
-    
-    if(!_musics){
-        
-        self.musics = [ZYMusics objectArrayWithFilename:@"Musics.plist"];
-        
-    }
-    return _musics;
-    
-}
+
 -(ZYPlayingMusicViewController *)playingVC{
     if (!_playingVC) {
         _playingVC = [[ZYPlayingMusicViewController alloc] init];
+        
     }
     return _playingVC;
 }

@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZYPlayingMusicViewController">
             <connections>
+                <outlet property="musicName" destination="lrh-ya-FGI" id="uhk-RA-WTP"/>
+                <outlet property="sigerIcon" destination="DDK-bh-oCU" id="c9p-xa-iCF"/>
+                <outlet property="sigerName" destination="WPg-gn-y1D" id="cpu-7j-7NQ"/>
                 <outlet property="view" destination="KKA-GZ-v4m" id="tOe-7E-2bE"/>
             </connections>
         </placeholder>
