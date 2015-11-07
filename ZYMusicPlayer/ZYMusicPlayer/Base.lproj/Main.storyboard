@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--主页-->
         <scene sceneID="NYm-kE-0EV">
             <objects>
-                <tableViewController id="aqq-zo-yct" sceneMemberID="viewController">
+                <tableViewController id="aqq-zo-yct" customClass="ZYMusicsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EPA-Bn-p3S">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,15 +27,20 @@
                             <outlet property="delegate" destination="aqq-zo-yct" id="dzV-9e-Yii"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="qVs-a7-uyC"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="主页" id="XAC-bw-uKi">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="8xC-jf-fdT"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALa-Ks-kEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="405"/>
+            <point key="canvasLocation" x="-401" y="351"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s7y-MU-3vB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppn-EA-8qq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="a9c-rM-GAS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X2A-m9-aEn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -45,9 +50,8 @@
                         <segue destination="aqq-zo-yct" kind="relationship" relationship="rootViewController" id="ZAq-c4-X09"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ppn-EA-8qq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1196" y="400"/>
+            <point key="canvasLocation" x="-1451" y="331"/>
         </scene>
     </scenes>
 </document>

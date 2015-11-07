@@ -7,94 +7,87 @@
 //
 
 #import "ZYMusicsViewController.h"
+#import "MJExtension.h"
+#import "ZYMusics.h"
+#import "UIImage+Circle.h"
+#import "ZYMusicsPlayingViewController.h"
 
 @interface ZYMusicsViewController ()
 
-@property (nonatomic, copy) NSString *<#name#>;
+@property (nonatomic, strong) NSArray *musics;
+
+//定义播放器属性
+@property (nonatomic, strong) ZYMusicsPlayingViewController *playingVC;
 
 @end
 
 @implementation ZYMusicsViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    //设置cell的行高
+    self.tableView.rowHeight = 80;
+    
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.musics.count;
+    
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    // Configure the cell...
+    static NSString *ID = @"musicCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
+    
+    //给cell设置数据
+    //首先取出模型的数据
+    ZYMusics *musics = self.musics[indexPath.row];
+    
+    cell.imageView.image = [UIImage circleImageWithName:musics.singerIcon borderWidth:3.0 borderColor:[UIColor blackColor]];
+    cell.textLabel.text = musics.name;
+    cell.detailTextLabel.text = musics.singer;
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+//当点击cell的时候调用这个方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 1.让cell变为不选中状态
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    // 2.弹出控制器
+    [self.playingVC show];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+#pragma mark - 懒加载
+- (NSArray *)musics{
+    
+    if(!_musics){
+        
+        self.musics = [ZYMusics objectArrayWithFilename:@"Musics.plist"];
+        
+    }
+    return _musics;
+    
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+-(ZYMusicsPlayingViewController *)playingVC{
+    if (!_playingVC) {
+        _playingVC = [[ZYMusicsPlayingViewController alloc] init];
+    }
+    return _playingVC;
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
