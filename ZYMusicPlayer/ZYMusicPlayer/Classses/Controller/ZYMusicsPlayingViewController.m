@@ -10,6 +10,7 @@
 #import "UIView+AdjustFrame.h"
 
 @interface ZYMusicsPlayingViewController ()
+- (IBAction)ExitBtn:(UIButton *)sender;
 
 @end
 
@@ -39,4 +40,16 @@
     
 }
 
+- (IBAction)ExitBtn:(UIButton *)sender {
+    
+    //1.拿到window
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    window.userInteractionEnabled = NO;
+    
+    [UIView animateWithDuration:3.0 animations:^{
+        self.view.y = self.view.height;
+    } completion:^(BOOL finished) {
+        window.userInteractionEnabled = YES;
+    }];
+}
 @end

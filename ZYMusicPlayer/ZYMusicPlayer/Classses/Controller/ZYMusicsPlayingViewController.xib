@@ -13,7 +13,24 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbY-jh-2rX">
+                    <rect key="frame" x="252" y="271" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="OSq-In-aGS"/>
+                        <constraint firstAttribute="height" constant="30" id="uts-6F-01h"/>
+                    </constraints>
+                    <state key="normal" title="退出"/>
+                    <connections>
+                        <action selector="ExitBtn:" destination="-1" eventType="touchUpInside" id="3wJ-6V-yU8"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="0.51552689860000001" blue="0.1333017373" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="nbY-jh-2rX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="38E-cf-Hnx"/>
+                <constraint firstItem="nbY-jh-2rX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3Ju-mk-nJQ"/>
+            </constraints>
         </view>
     </objects>
 </document>
