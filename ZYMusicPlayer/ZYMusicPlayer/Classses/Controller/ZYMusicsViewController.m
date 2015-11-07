@@ -10,14 +10,14 @@
 #import "MJExtension.h"
 #import "ZYMusics.h"
 #import "UIImage+Circle.h"
-#import "ZYMusicsPlayingViewController.h"
+#import "ZYPlayingMusicViewController.h"
 
 @interface ZYMusicsViewController ()
 
 @property (nonatomic, strong) NSArray *musics;
 
 //定义播放器属性
-@property (nonatomic, strong) ZYMusicsPlayingViewController *playingVC;
+@property (nonatomic, strong) ZYPlayingMusicViewController *playingVC;
 
 @end
 
@@ -82,9 +82,9 @@
     return _musics;
     
 }
--(ZYMusicsPlayingViewController *)playingVC{
+-(ZYPlayingMusicViewController *)playingVC{
     if (!_playingVC) {
-        _playingVC = [[ZYMusicsPlayingViewController alloc] init];
+        _playingVC = [[ZYPlayingMusicViewController alloc] init];
     }
     return _playingVC;
 }

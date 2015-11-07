@@ -61,13 +61,12 @@
 		360A3A211BEAFE06005B3A89 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 360A39F81BEAFE06005B3A89 /* Musics.plist */; settings = {ASSET_TAGS = (); }; };
 		360A3A241BEAFF5A005B3A89 /* ZYMusicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A3A231BEAFF5A005B3A89 /* ZYMusicsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		360A3A271BEAFF7A005B3A89 /* ZYMusics.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A3A261BEAFF7A005B3A89 /* ZYMusics.m */; settings = {ASSET_TAGS = (); }; };
-		360A3A2B1BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A3A291BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.m */; settings = {ASSET_TAGS = (); }; };
-		360A3A2C1BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360A3A2A1BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		365286411BE3876B002FE0F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 365286401BE3876B002FE0F7 /* main.m */; };
 		365286441BE3876B002FE0F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 365286431BE3876B002FE0F7 /* AppDelegate.m */; };
 		3652864A1BE3876B002FE0F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 365286481BE3876B002FE0F7 /* Main.storyboard */; };
 		3652864C1BE3876B002FE0F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3652864B1BE3876B002FE0F7 /* Assets.xcassets */; };
-		3652864F1BE3876B002FE0F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3652864D1BE3876B002FE0F7 /* LaunchScreen.storyboard */; };
+		36D5426C1BEDFA890012579A /* ZYPlayingMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D5426A1BEDFA890012579A /* ZYPlayingMusicViewController.m */; settings = {ASSET_TAGS = (); }; };
+		36D5426D1BEDFA890012579A /* ZYPlayingMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D5426B1BEDFA890012579A /* ZYPlayingMusicViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,17 +138,16 @@
 		360A3A231BEAFF5A005B3A89 /* ZYMusicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMusicsViewController.m; sourceTree = "<group>"; };
 		360A3A251BEAFF79005B3A89 /* ZYMusics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMusics.h; sourceTree = "<group>"; };
 		360A3A261BEAFF7A005B3A89 /* ZYMusics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMusics.m; sourceTree = "<group>"; };
-		360A3A281BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMusicsPlayingViewController.h; sourceTree = "<group>"; };
-		360A3A291BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMusicsPlayingViewController.m; sourceTree = "<group>"; };
-		360A3A2A1BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYMusicsPlayingViewController.xib; sourceTree = "<group>"; };
 		3652863C1BE3876B002FE0F7 /* ZYMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		365286401BE3876B002FE0F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		365286421BE3876B002FE0F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
 		365286431BE3876B002FE0F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		365286491BE3876B002FE0F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3652864B1BE3876B002FE0F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3652864E1BE3876B002FE0F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		365286501BE3876B002FE0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36D542691BEDFA890012579A /* ZYPlayingMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPlayingMusicViewController.h; sourceTree = "<group>"; };
+		36D5426A1BEDFA890012579A /* ZYPlayingMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPlayingMusicViewController.m; sourceTree = "<group>"; };
+		36D5426B1BEDFA890012579A /* ZYPlayingMusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYPlayingMusicViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,9 +191,9 @@
 			children = (
 				360A3A221BEAFF5A005B3A89 /* ZYMusicsViewController.h */,
 				360A3A231BEAFF5A005B3A89 /* ZYMusicsViewController.m */,
-				360A3A281BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.h */,
-				360A3A291BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.m */,
-				360A3A2A1BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.xib */,
+				36D542691BEDFA890012579A /* ZYPlayingMusicViewController.h */,
+				36D5426A1BEDFA890012579A /* ZYPlayingMusicViewController.m */,
+				36D5426B1BEDFA890012579A /* ZYPlayingMusicViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -360,7 +358,6 @@
 				360A39A11BEAFBF3005B3A89 /* Classses */,
 				365286481BE3876B002FE0F7 /* Main.storyboard */,
 				3652864B1BE3876B002FE0F7 /* Assets.xcassets */,
-				3652864D1BE3876B002FE0F7 /* LaunchScreen.storyboard */,
 				3652863F1BE3876B002FE0F7 /* Supporting Files */,
 			);
 			path = ZYMusicPlayer;
@@ -449,7 +446,6 @@
 				360A3A0D1BEAFE06005B3A89 /* 10405520.lrc in Resources */,
 				360A3A041BEAFE06005B3A89 /* kzxd_icon@2x.jpg in Resources */,
 				360A39FF1BEAFE06005B3A89 /* jay@2x.jpg in Resources */,
-				3652864F1BE3876B002FE0F7 /* LaunchScreen.storyboard in Resources */,
 				360A3A0C1BEAFE06005B3A89 /* zxy_icon@2x.jpg in Resources */,
 				360A3A1E1BEAFE06005B3A89 /* 255319.mp3 in Resources */,
 				360A3A091BEAFE06005B3A89 /* wf@2x.jpg in Resources */,
@@ -457,11 +453,11 @@
 				360A3A0A1BEAFE06005B3A89 /* wf_icon@2x.jpg in Resources */,
 				360A39FE1BEAFE06005B3A89 /* eason_icon@2x.jpg in Resources */,
 				360A3A1A1BEAFE06005B3A89 /* 120125029.mp3 in Resources */,
+				36D5426D1BEDFA890012579A /* ZYPlayingMusicViewController.xib in Resources */,
 				360A3A171BEAFE06005B3A89 /* 10405520.mp3 in Resources */,
 				360A3A031BEAFE06005B3A89 /* kzxd@2x.jpg in Resources */,
 				360A3A061BEAFE06005B3A89 /* lkq_icon@2x.jpg in Resources */,
 				360A3A1D1BEAFE06005B3A89 /* 235319.mp3 in Resources */,
-				360A3A2C1BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.xib in Resources */,
 				360A3A101BEAFE06005B3A89 /* 12309111.lrc in Resources */,
 				360A3A011BEAFE06005B3A89 /* jj@2x.jpg in Resources */,
 				360A3A0B1BEAFE06005B3A89 /* zxy@2x.jpg in Resources */,
@@ -490,11 +486,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D5426C1BEDFA890012579A /* ZYPlayingMusicViewController.m in Sources */,
 				360A39BE1BEAFDDF005B3A89 /* MJIvar.m in Sources */,
 				360A39CA1BEAFDF5005B3A89 /* UIImage+Circle.m in Sources */,
 				365286441BE3876B002FE0F7 /* AppDelegate.m in Sources */,
 				360A3A241BEAFF5A005B3A89 /* ZYMusicsViewController.m in Sources */,
-				360A3A2B1BEB3DFE005B3A89 /* ZYMusicsPlayingViewController.m in Sources */,
 				360A3A271BEAFF7A005B3A89 /* ZYMusics.m in Sources */,
 				360A39BD1BEAFDDF005B3A89 /* MJArgument.m in Sources */,
 				360A39CB1BEAFDF5005B3A89 /* UIView+AdjustFrame.m in Sources */,
@@ -518,14 +514,6 @@
 				365286491BE3876B002FE0F7 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3652864D1BE3876B002FE0F7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3652864E1BE3876B002FE0F7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -615,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = ZYMusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.itcast.ZYMusicPlayer;
@@ -626,6 +615,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = ZYMusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.itcast.ZYMusicPlayer;

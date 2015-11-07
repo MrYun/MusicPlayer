@@ -40,7 +40,6 @@
         <!--Navigation Controller-->
         <scene sceneID="s7y-MU-3vB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ppn-EA-8qq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="a9c-rM-GAS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X2A-m9-aEn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -50,6 +49,7 @@
                         <segue destination="aqq-zo-yct" kind="relationship" relationship="rootViewController" id="ZAq-c4-X09"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppn-EA-8qq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1451" y="331"/>
         </scene>
