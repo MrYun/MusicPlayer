@@ -9,6 +9,7 @@
                 <outlet property="musicName" destination="lrh-ya-FGI" id="uhk-RA-WTP"/>
                 <outlet property="sigerIcon" destination="DDK-bh-oCU" id="c9p-xa-iCF"/>
                 <outlet property="sigerName" destination="WPg-gn-y1D" id="cpu-7j-7NQ"/>
+                <outlet property="songTotalTime" destination="baS-vh-LDA" id="Qm7-kZ-vCF"/>
                 <outlet property="view" destination="KKA-GZ-v4m" id="tOe-7E-2bE"/>
             </connections>
         </placeholder>
@@ -66,18 +67,6 @@
                                 <constraint firstAttribute="height" constant="5" id="uhH-v7-8vH"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzE-W7-Q3A" userLabel="拖动按钮">
-                            <rect key="frame" x="200" y="47" width="41" height="21"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="21" id="ccV-Ub-VJP"/>
-                                <constraint firstAttribute="width" constant="41" id="mAC-Ay-m58"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                            <state key="normal" title="00:00" backgroundImage="process_thumb">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="李克勤" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPg-gn-y1D" userLabel="歌手Label">
                             <rect key="frame" x="8" y="31" width="39" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -98,20 +87,31 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:54" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baS-vh-LDA" userLabel="显示时间Label">
-                            <rect key="frame" x="563" y="68" width="29" height="16"/>
+                            <rect key="frame" x="550" y="68" width="42" height="16"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="16" id="1t1-8k-mcF"/>
-                                <constraint firstAttribute="width" constant="29" id="1xY-1J-NjK"/>
+                                <constraint firstAttribute="height" constant="16" id="6kF-nu-t7t"/>
+                                <constraint firstAttribute="width" constant="42" id="T8y-xu-4yT"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzE-W7-Q3A" userLabel="拖动按钮">
+                            <rect key="frame" x="171" y="47" width="41" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="ccV-Ub-VJP"/>
+                                <constraint firstAttribute="width" constant="41" id="mAC-Ay-m58"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal" title="00:00" backgroundImage="process_thumb">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="centerX" secondItem="52J-32-cYc" secondAttribute="centerX" id="0Kt-EY-whI"/>
-                        <constraint firstItem="baS-vh-LDA" firstAttribute="top" secondItem="VgJ-Ge-iHJ" secondAttribute="bottom" constant="8" id="0le-E6-cNE"/>
                         <constraint firstItem="lrh-ya-FGI" firstAttribute="leading" secondItem="ec9-Pu-N6N" secondAttribute="leading" constant="8" id="0uv-mo-MfA"/>
                         <constraint firstItem="dzE-W7-Q3A" firstAttribute="centerY" secondItem="VgJ-Ge-iHJ" secondAttribute="centerY" id="1di-Ac-K7P"/>
                         <constraint firstItem="Can-gf-m6f" firstAttribute="width" secondItem="dzE-W7-Q3A" secondAttribute="width" id="6Mo-hS-KRa"/>
@@ -122,9 +122,11 @@
                         <constraint firstItem="VgJ-Ge-iHJ" firstAttribute="leading" secondItem="ec9-Pu-N6N" secondAttribute="leading" id="UGj-aL-grY"/>
                         <constraint firstItem="52J-32-cYc" firstAttribute="centerY" secondItem="9wc-Q9-1Iy" secondAttribute="centerY" id="V5u-IT-7rX"/>
                         <constraint firstItem="VgJ-Ge-iHJ" firstAttribute="top" secondItem="WPg-gn-y1D" secondAttribute="bottom" constant="8" id="Xdd-4V-y5u"/>
+                        <constraint firstItem="baS-vh-LDA" firstAttribute="top" secondItem="VgJ-Ge-iHJ" secondAttribute="bottom" constant="8" id="ZT0-Ja-UR1"/>
                         <constraint firstItem="Can-gf-m6f" firstAttribute="height" secondItem="dzE-W7-Q3A" secondAttribute="height" id="Zkl-WD-rsN"/>
                         <constraint firstItem="WPg-gn-y1D" firstAttribute="top" secondItem="lrh-ya-FGI" secondAttribute="bottom" constant="5" id="aoA-mk-bvH"/>
                         <constraint firstItem="52J-32-cYc" firstAttribute="leading" secondItem="9wc-Q9-1Iy" secondAttribute="trailing" constant="20" id="ap4-0t-GJ6"/>
+                        <constraint firstAttribute="trailing" secondItem="baS-vh-LDA" secondAttribute="trailing" constant="8" id="ayi-lm-vdL"/>
                         <constraint firstItem="SV6-g3-mmQ" firstAttribute="leading" secondItem="52J-32-cYc" secondAttribute="trailing" constant="20" id="cXp-MT-1AN"/>
                         <constraint firstItem="SV6-g3-mmQ" firstAttribute="height" secondItem="9wc-Q9-1Iy" secondAttribute="height" id="eKp-nY-ofl"/>
                         <constraint firstAttribute="bottom" secondItem="52J-32-cYc" secondAttribute="bottom" constant="10" id="hml-63-TJN"/>
@@ -134,7 +136,6 @@
                         <constraint firstItem="SV6-g3-mmQ" firstAttribute="centerY" secondItem="9wc-Q9-1Iy" secondAttribute="centerY" id="vrr-ea-0OL"/>
                         <constraint firstAttribute="height" constant="160" id="wRE-as-qWT"/>
                         <constraint firstItem="dzE-W7-Q3A" firstAttribute="leading" secondItem="IGc-hG-HAR" secondAttribute="trailing" constant="-10" id="wyJ-Ay-ClX"/>
-                        <constraint firstAttribute="trailing" secondItem="baS-vh-LDA" secondAttribute="trailing" constant="8" id="zeN-3p-adA"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYq-WD-GOl" userLabel="退出按钮">

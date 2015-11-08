@@ -23,6 +23,8 @@
 /// 歌手名字
 @property (weak, nonatomic) IBOutlet UILabel *sigerName;
 
+@property (weak, nonatomic) IBOutlet UILabel *songTotalTime;
+
 - (IBAction)exit;
 
 @end
@@ -50,14 +52,20 @@
         self.sigerName.text = playingMusic.singer;
         self.musicName.text = playingMusic.name;
         
-        //播放音乐
-        [ZYAudioPlay startPlayMusic:self.playingMusic.filename];
+        
+        // 3.播放音乐
+        AVAudioPlayer *player = [ZYAudioPlay startPlayMusic:playingMusic.filename];
+        self.songTotalTime.text = [self stringWithTime:player.duration];
+
+        
+        
+        
+        
     }
 }
 
 
 /// 停止播放音乐
- 
 - (void)stopPlayingMusic {
     // 1.清除界面数据
     self.musicName.text = nil;
@@ -116,5 +124,12 @@
     }];
 }
 
+#pragma mark - 计算时间私有方法
+- (NSString *)stringWithTime:(NSTimeInterval)time{
+    NSInteger minute = time / 60;
+    NSInteger second =(NSInteger)time % 60;
+    return  [NSString stringWithFormat:@"%02ld:%02ld",minute,second];
+    
+}
 
 @end

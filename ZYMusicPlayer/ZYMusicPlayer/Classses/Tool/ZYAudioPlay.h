@@ -12,7 +12,7 @@
 @interface ZYAudioPlay : UIRefreshControl
 
 /// 开始播放音乐
-+ (void)startPlayMusic:(NSString *)musicName;
++ (AVAudioPlayer *)startPlayMusic:(NSString *)musicName;
 
 /// 暂停播放音乐
 + (void)pausePlayMusic:(NSString *)musicName;

@@ -25,7 +25,7 @@ static NSMutableDictionary *_musics;
 
 #pragma mark - 播放音乐
 /// 开始播放音乐
-+ (void)startPlayMusic:(NSString *)musicName{
++ (AVAudioPlayer *)startPlayMusic:(NSString *)musicName{
     
     //断言
     NSAssert(musicName, @"不能为空值");
@@ -46,6 +46,8 @@ static NSMutableDictionary *_musics;
     }
     //播放音乐
     [player play];
+    //返回播放器
+    return player;
     
 }
 
